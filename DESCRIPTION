@@ -1,7 +1,7 @@
 Package: PNADcIBGE
 Type: Package
 Title: Downloading, Reading and Analysing PNADc Microdata
-Version: 0.4.1.1
+Version: 0.4.2
 Authors@R: person("Douglas", "Braga", email = "douglas.braga@ibge.gov.br",
                   role = c("aut", "cre"))
 Description: Provides tools for download, read, and analyse the PNADc
