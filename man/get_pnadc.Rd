@@ -4,8 +4,15 @@
 \alias{get_pnadc}
 \title{Download, label and create design object for PNADc microdata}
 \usage{
-get_pnadc(year, quarter = NULL, interview = NULL, vars = NULL,
-  labels = T, design = T, savedir = tempdir())
+get_pnadc(
+  year,
+  quarter = NULL,
+  interview = NULL,
+  vars = NULL,
+  labels = T,
+  design = T,
+  savedir = tempdir()
+)
 }
 \arguments{
 \item{year}{The year of the data to be downloaded. Must be a number between 2012 and current year. Vector not accepted.}
