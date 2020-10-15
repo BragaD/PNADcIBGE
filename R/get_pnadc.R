@@ -47,7 +47,7 @@ get_pnadc <- function (year, quarter = NULL, interview = NULL, vars = NULL,
     utils::download.file(paste0(ftpdir, "Documentacao/",
                                 inputfile), paste0(savedir, "/input.zip"))
     utils::unzip(paste0(savedir, "/input.zip"), exdir = savedir)
-    input_txt <- "Input_PNADC_trimestral.txt"
+    input_txt <- "input_PNADC_trimestral.txt"
     utils::download.file(paste0(ftpdata, dataname), paste0(savedir,
                                                            "/", dataname))
     utils::unzip(paste0(savedir, "/", dataname), exdir = savedir)
