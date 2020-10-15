@@ -58,7 +58,7 @@ get_pnadc <- function (year, quarter = NULL, interview = NULL, vars = NULL,
     data_pnadc <- read_pnadc(microdatadir, paste0(savedir,
                                                    "/", input_txt), vars = vars)
     if (labels == T) {
-      dicnames <- dir(savedir, pattern = "PNAD_Continua_microdados.xls")
+      dicnames <- dir(savedir, pattern = ".*PNAD.*_microdados.*.xls")
       dicfile <- paste0(savedir, "/", dicnames[1])
       data_pnadc <- pnadc_labeller(data_pnadc, dicfile)
     }
