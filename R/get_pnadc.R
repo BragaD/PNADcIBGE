@@ -47,7 +47,7 @@ get_pnadc <- function (year, quarter = NULL, interview = NULL, vars = NULL,
     utils::download.file(paste0(ftpdir, "Documentacao/",
                                 inputfile), paste0(savedir, "/input.zip"))
     utils::unzip(paste0(savedir, "/input.zip"), exdir = savedir)
-    input_txt <- "Input_PNADC_trimestral.txt"
+    input_txt <- "input_PNADC_trimestral.txt"
     utils::download.file(paste0(ftpdata, dataname), paste0(savedir,
                                                            "/", dataname))
     utils::unzip(paste0(savedir, "/", dataname), exdir = savedir)
@@ -58,7 +58,8 @@ get_pnadc <- function (year, quarter = NULL, interview = NULL, vars = NULL,
     data_pnadc <- read_pnadc(microdatadir, paste0(savedir,
                                                    "/", input_txt), vars = vars)
     if (labels == T) {
-      dicnames <- dir(savedir, pattern = "PNAD_Continua_microdados.xls")
+      dicnames <- dir(savedir, pattern = ".*PNAD.*_microdados.*.xls")
+      
       dicfile <- paste0(savedir, "/", dicnames[1])
       data_pnadc <- pnadc_labeller(data_pnadc, dicfile)
     }
